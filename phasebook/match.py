@@ -20,8 +20,19 @@ def match(match_id):
 
 
 def is_match(fave_numbers_1, fave_numbers_2):
-    for number in fave_numbers_2:
-        if number in fave_numbers_1:
-            return True
+    if len(fave_numbers_1) > len(fave_numbers_2):
+        length = len(fave_numbers_1)
+        high = fave_numbers_1
+        low = fave_numbers_2
+    else:
+        length = len(fave_numbers_2)
+        high = fave_numbers_2
+        low = fave_numbers_1
 
+    for i in range(length + 1):
+        for j in range(i):
+            if j >= len(low):
+                continue
+            if low[j] == high[(i-1)-j]:
+                return True
     return False
