@@ -65,6 +65,9 @@ def search_users(args):
             continue
         except:
             output = output
-    # return the outpu in the page
+    # If no user details are found, return not found. 
+    if output == []:
+        return "Not Found"
 
+    # return the output in the page
     return output
