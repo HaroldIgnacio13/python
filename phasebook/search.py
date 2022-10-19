@@ -27,11 +27,8 @@ def search_users(args):
 
     # Implement search here!
     output = []
-
-    # <-- ID
     # get all the users and stored in user variable
     for user in USERS:
-
         # if no requested id it will terminate and continue to the next try
         try:
             # check if the user id is the same in the requested id
@@ -40,9 +37,6 @@ def search_users(args):
                 continue
         except:
             output = output
-    # -->
-    # <-- AGE
-    for user in USERS:
 
         # if no requested age it will terminate and continue to the next try
         try:
@@ -52,9 +46,7 @@ def search_users(args):
                 continue
         except:
             output = output
-    # -->
-    # <-- NAME
-    for user in USERS:
+
         # if no requested age it will terminate and continue to the next try
         try:
             # check if the user name have the same word
@@ -63,9 +55,7 @@ def search_users(args):
             continue
         except:
             output = output
-    # -->
-    # <-- OCCUPATION
-    for user in USERS:
+
         # if no requested accupation it will terminate
         try:
             # check if the user occupation have the same word
@@ -74,10 +64,10 @@ def search_users(args):
             continue
         except:
             output = output
-    # -->
     # If no user details are found, return not found. 
     if output == []:
         return "Not Found"
 
     # return the output in the page
+    
     return output
